@@ -4,8 +4,6 @@ import com.houserent.domain.House;
 import com.houserent.service.HouseService;
 import com.houserent.utils.Utility;
 
-import java.util.stream.Stream;
-
 /**
  * 1.显示界面
  * 2.接收用户的输入
