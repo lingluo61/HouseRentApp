@@ -1,24 +1,19 @@
 package com.houserent.utils;
 
-
-/**
- * 工具类的作用:
- * 处理各种情况的用户输入，并且能够按照程序员的需求，得到用户的控制台输入。
+/*
+  工具类的作用:
+  处理各种情况的用户输入，并且能够按照程序员的需求，得到用户的控制台输入。
  */
 
 import java.util.*;
 
-/**
-
-
- */
 public class Utility {
     //静态属性。。。
     private static Scanner scanner = new Scanner(System.in);
 
-
     /**
      * 功能：读取键盘输入的一个菜单选项，值：1——5的范围
+     *
      * @return 1——5
      */
     public static char readMenuSelection() {
@@ -36,6 +31,7 @@ public class Utility {
 
     /**
      * 功能：读取键盘输入的一个字符
+     *
      * @return 一个字符
      */
     public static char readChar() {
@@ -45,6 +41,7 @@ public class Utility {
 
     /**
      * 功能：读取键盘输入的一个字符，如果直接按回车，则返回指定的默认值；否则返回输入的那个字符
+     *
      * @param defaultValue 指定的默认值
      * @return 默认值或输入的字符
      */
@@ -56,6 +53,7 @@ public class Utility {
 
     /**
      * 功能：读取键盘输入的整型，长度小于10位
+     *
      * @return 整数
      */
     public static int readInt() {
@@ -74,6 +72,7 @@ public class Utility {
 
     /**
      * 功能：读取键盘输入的 整数或默认值，如果直接回车，则返回默认值，否则返回输入的整数
+     *
      * @param defaultValue 指定的默认值
      * @return 整数或默认值
      */
@@ -98,30 +97,30 @@ public class Utility {
 
     /**
      * 功能：读取键盘输入的指定长度的字符串
+     *
      * @param limit 限制的长度
      * @return 指定长度的字符串
      */
-
     public static String readString(int limit) {
         return readKeyBoard(limit, false);
     }
 
     /**
      * 功能：读取键盘输入的指定长度的字符串或默认值，如果直接回车，返回默认值，否则返回字符串
-     * @param limit 限制的长度
+     *
+     * @param limit        限制的长度
      * @param defaultValue 指定的默认值
      * @return 指定长度的字符串
      */
-
     public static String readString(int limit, String defaultValue) {
         String str = readKeyBoard(limit, true);
         return str.equals("") ? defaultValue : str;
     }
 
-
     /**
      * 功能：读取键盘输入的确认选项，Y或N
      * 将小的功能，封装到一个方法中.
+     *
      * @return Y或N
      */
     public static char readConfirmSelection() {
@@ -143,12 +142,12 @@ public class Utility {
 
     /**
      * 功能： 读取一个字符串
-     * @param limit 读取的长度
-     * @param blankReturn 如果为true ,表示 可以读空字符串。 
-     * 					  如果为false表示 不能读空字符串。
      *
-     *	如果输入为空，或者输入大于limit的长度，就会提示重新输入。
-     * @return
+     * @param limit       读取的长度
+     * @param blankReturn 如果为true ,表示 可以读空字符串。
+     *                    如果为false表示 不能读空字符串。
+     *                    如果输入为空，或者输入大于limit的长度，就会提示重新输入。
+     * @return 可控制可空字符串
      */
     private static String readKeyBoard(int limit, boolean blankReturn) {
 
